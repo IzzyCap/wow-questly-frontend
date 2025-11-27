@@ -36,27 +36,26 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center px-4">
+    <div className="min-h-screen flex items-center justify-center px-4 py-8">
       <main className="w-full max-w-4xl">
-        <div className="text-center mb-12 space-y-4">
-          <h1 className="text-6xl md:text-7xl font-bold bg-clip-text text-transparent bg-linear-to-r from-yellow-400 to-amber-500 animate-[pulse_3s_ease-in-out_infinite]">
+        <div className="text-center mb-8 md:mb-12 space-y-3 md:space-y-4">
+          <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold bg-clip-text text-transparent bg-linear-to-r from-yellow-400 to-amber-500 animate-[pulse_3s_ease-in-out_infinite]">
             WoW Questly
           </h1>
-          <p className="text-xl md:text-2xl text-neutral-400">
+          <p className="text-lg sm:text-xl md:text-2xl text-neutral-400">
             Discover your next adventure in Azeroth
           </p>
         </div>
 
         <form onSubmit={handleSearch} className="relative group">
-          {/* <div className="absolute -inset-1 bg-linear-to-r from-amber-600 via-yellow-500 to-amber-600 rounded-2xl blur-lg opacity-20 group-hover:opacity-40 transition duration-500"></div> */}
           <div className="relative flex items-center bg-zinc-900/80 backdrop-blur-sm rounded-xl border border-zinc-800 overflow-hidden shadow-xl shadow-black/50">
-            <span className="pl-6 text-neutral-500 text-2xl">🔍</span>
+            <span className="pl-4 md:pl-6 text-neutral-500 text-xl md:text-2xl">🔍</span>
             <input
               type="text"
               value={query}
               onChange={(e) => setQuery(e.target.value)}
               placeholder="Search quests, zones, or keywords..."
-              className="flex-1 px-6 py-6 text-lg bg-transparent border-0 focus:outline-none text-white placeholder-neutral-600"
+              className="flex-1 px-4 py-4 md:px-6 md:py-6 text-base md:text-lg bg-transparent border-0 focus:outline-none text-white placeholder-neutral-600"
               autoFocus
             />
             {/* <button
@@ -76,21 +75,21 @@ export default function Home() {
           </div>
         </form>
 
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
-          <div className="bg-zinc-900/40 backdrop-blur-sm rounded-lg p-6 border border-zinc-800">
-            <div className="text-3xl mb-2">⚔️</div>
-            <h3 className="font-semibold text-lg mb-1">Epic Quests</h3>
-            <p className="text-neutral-500 text-sm">Find legendary missions</p>
+        <div className="mt-8 md:mt-12 grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 text-center">
+          <div className="bg-zinc-900/40 backdrop-blur-sm rounded-lg p-5 md:p-6 border border-zinc-800">
+            <div className="text-4xl md:text-3xl mb-3 md:mb-2">⚔️</div>
+            <h3 className="font-semibold text-base md:text-lg mb-1">Epic Quests</h3>
+            <p className="text-neutral-500 text-xs md:text-sm">Find legendary missions</p>
           </div>
-          <div className="bg-zinc-900/40 backdrop-blur-sm rounded-lg p-6 border border-zinc-800">
-            <div className="text-3xl mb-2">🗺️</div>
-            <h3 className="font-semibold text-lg mb-1">All Zones</h3>
-            <p className="text-neutral-500 text-sm">Explore every region</p>
+          <div className="bg-zinc-900/40 backdrop-blur-sm rounded-lg p-5 md:p-6 border border-zinc-800">
+            <div className="text-4xl md:text-3xl mb-3 md:mb-2">🗺️</div>
+            <h3 className="font-semibold text-base md:text-lg mb-1">All Zones</h3>
+            <p className="text-neutral-500 text-xs md:text-sm">Explore every region</p>
           </div>
-          <div className="bg-zinc-900/40 backdrop-blur-sm rounded-lg p-6 border border-zinc-800">
-            <div className="text-3xl mb-2">🎮</div>
-            <h3 className="font-semibold text-lg mb-1">All Expansions</h3>
-            <p className="text-neutral-500 text-sm">Classic to Dragonflight</p>
+          <div className="bg-zinc-900/40 backdrop-blur-sm rounded-lg p-5 md:p-6 border border-zinc-800">
+            <div className="text-4xl md:text-3xl mb-3 md:mb-2">🎮</div>
+            <h3 className="font-semibold text-base md:text-lg mb-1">All Expansions</h3>
+            <p className="text-neutral-500 text-xs md:text-sm">Classic to Dragonflight</p>
           </div>
         </div>
       </main>
