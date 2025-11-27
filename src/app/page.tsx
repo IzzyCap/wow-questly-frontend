@@ -59,10 +59,10 @@ export default function Home() {
               className="flex-1 px-6 py-6 text-lg bg-transparent border-0 focus:outline-none text-white placeholder-neutral-600"
               autoFocus
             />
-            <button
+            {/* <button
               type="submit"
               disabled={loading}
-              className="m-2 px-8 py-4 bg-linear-to-r from-yellow-400 to-amber-500 hover:from-yellow-500 hover:to-amber-500 disabled:from-yellow-400 disabled:to-amber-500 disabled:cursor-not-allowed text-white font-bold rounded-lg transition-all duration-200 shadow-sm shadow-black/50 hover:shadow-md hover:shadow-yellow-900/40 transform hover:scale-102 disabled:transform-none disabled:opacity-70 min-w-[140px] h-14 flex items-center justify-center"
+              className="hidden lg:flex m-2 px-8 py-4 bg-linear-to-r from-yellow-400 to-amber-500 hover:from-yellow-500 hover:to-amber-500 disabled:from-yellow-400 disabled:to-amber-500 disabled:cursor-not-allowed text-white font-bold rounded-lg transition-all duration-200 shadow-sm shadow-black/50 hover:shadow-md hover:shadow-yellow-900/40 transform hover:scale-102 disabled:transform-none disabled:opacity-70 min-w-[140px] h-14 items-center justify-center"
             >
               {loading ? (
                 <svg className="animate-spin h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
@@ -72,7 +72,7 @@ export default function Home() {
               ) : (
                 'Search'
               )}
-            </button>
+            </button> */}
           </div>
         </form>
 
