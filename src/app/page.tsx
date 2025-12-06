@@ -17,7 +17,6 @@ export default function Home() {
     try {
       // Search using the API
       const { data } = await getQuests(query.trim());
-      console.log('search data', data);
 
       if (data.length === 1) {
         // If exactly one result, go directly to mission page

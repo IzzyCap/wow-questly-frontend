@@ -13,7 +13,6 @@ export default async function QuestPage({
   try {
     const { data } = await getQuest(slug);
     quest = data;
-    console.log(quest);
   } catch {
     notFound();
   }
@@ -54,16 +53,16 @@ export default async function QuestPage({
                 ⭐ <strong>Level:</strong> {quest.level}
               </QuestBadge>
               <QuestBadge>
-                🏳️ <strong>Faction:</strong> {quest.faction}
+                🏳️ {quest.faction}
               </QuestBadge>
               {quest.zone && (
                 <QuestBadge>
-                  📍 <strong>Zone:</strong> {quest.zone}
+                  📍 {quest.zone}
                 </QuestBadge>
               )}
               {quest.expansion && (
                 <QuestBadge>
-                  🎮 <strong>Expansion:</strong> {quest.expansion}
+                  🎮 {quest.expansion}
                 </QuestBadge>
               )}
               {quest.coords && (
@@ -72,7 +71,7 @@ export default async function QuestPage({
                 </QuestBadge>
               )}
               <QuestBadge>
-                💰 <strong>Rewards:</strong> {formatRewards(quest.rewards)}
+                💰 {formatRewards(quest.rewards)}
               </QuestBadge>
             </div>
             {quest.youtubeId && (
