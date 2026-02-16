@@ -2,8 +2,8 @@ import { getQuest, getQuests } from '@/lib/api';
 import { notFound } from 'next/navigation';
 import { QuestBadge } from '@/components/QuestBadge';
 
-// ISR: revalidate cached pages every 60 seconds
-export const revalidate = 60;
+// ISR: revalidate cached pages every 10 minutes
+export const revalidate = 600;
 
 // SSG: pre-render quest pages at build time
 export async function generateStaticParams() {
