@@ -1,6 +1,22 @@
-import { getQuest } from '@/lib/api';
+import { getQuest, getQuests } from '@/lib/api';
 import { notFound } from 'next/navigation';
 import { QuestBadge } from '@/components/QuestBadge';
+
+// ISR: revalidate cached pages every 60 seconds
+export const revalidate = 60;
+
+// SSG: pre-render quest pages at build time
+export async function generateStaticParams() {
+  try {
+    const { data } = await getQuests('');
+    return data.map((quest) => ({ slug: quest.slug }));
+  } catch {
+    return [];
+  }
+}
+
+// Allow slugs not returned by generateStaticParams to be rendered on-demand
+export const dynamicParams = true;
 
 export default async function QuestPage({
   params,

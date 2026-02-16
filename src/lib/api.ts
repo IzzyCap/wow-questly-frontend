@@ -40,9 +40,7 @@ export async function getQuests(query: string): Promise<QuestsResponse> {
 }
 
 export async function getQuest(slug: string): Promise<QuestResponse> {
-  const res = await fetch(`${API_URL}/quests/${slug}`, {
-    cache: 'no-store',
-  });
+  const res = await fetch(`${API_URL}/quests/${slug}`);
   
   if (!res.ok) {
     throw new Error('Mission not found');
